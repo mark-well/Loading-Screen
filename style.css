@@ -1,0 +1,173 @@
+
+:root {
+	--primary-color: #5AB2FF;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Josefin Sans", Sans-Serif;
+}
+
+body {
+	background-color: #222222;
+}
+
+/* MENU */
+
+.menu {
+	width: 100vw;
+	display: flex;
+	overflow: auto;
+	column-gap: 10px;
+	padding: 10px;
+	background-color: #111111;
+	border-bottom: 2px solid #555555;
+}
+
+.card {
+	width: 75px;
+	height: 75px;
+	color: #ffffff;
+	display: flex;
+	flex: 1 0 75px;
+	padding: 20px;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary-color);
+	border-radius: 3px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.selected {
+	background-color: #0FD361;
+}
+
+.card:hover {
+	background-color: #0FD361;
+}
+
+
+/* LOADING CARD */
+.loading-container {
+	width: 100vw;
+	height: 75vh;
+	position: relative;
+}
+
+.loading-card {
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: absolute;
+	color: #ffffff;
+}
+
+/* ============ */
+/* CARD 1 */
+.card1 > .wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 20px;
+}
+
+.card1 > .wrapper > .icon {
+	width: 150px;
+	height: 150px;
+	border: 5px solid #29FF85;
+	border-radius: 50%;
+	border-bottom: 5px solid transparent;
+	animation-name: card1-icon-animation;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.card1 > .wrapper > .text {
+	animation-name: card1-text-animation;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes card1-icon-animation {
+	from {
+		transform: rotate(0deg);
+	}
+	
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes card1-text-animation {
+	0% {
+		opacity: 1;
+	}
+	
+	50% {
+		opacity: 0.10;
+	}
+	
+	100% {
+		opacity: 1;
+	}
+}
+
+/* CARD 2 */
+.card2 > .wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.card2 > .wrapper > .icon {
+	width: 100px;
+	height: 100px;
+	background-image: url('./loading2-assets/loading-icon.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	animation-name: card2-icon-animation;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.card2 > .wrapper > .text {
+	animation-name: card2-text-animation;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes card2-icon-animation {
+	from {
+		transform: rotate(0deg);
+	}
+	
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes card2-text-animation {
+	0% {
+		opacity: 1;
+	}
+	
+	50% {
+		opacity: 0.10;
+	}
+	
+	100% {
+		opacity: 1;
+	}
+}
